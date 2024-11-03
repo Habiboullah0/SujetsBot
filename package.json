@@ -1,0 +1,24 @@
+{
+  "name": "sujets",
+  "version": "1.0.0",
+  "main": "sujets.js",
+  "scripts": {
+<<<<<<< HEAD
+  "start": "node sujets.js",
+=======
+    "start": "node sujets.js",
+>>>>>>> d0d0f47 (first commit)
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Habiboullah",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+<<<<<<< HEAD
+=======
+    "dotenv": "^16.4.5",
+>>>>>>> d0d0f47 (first commit)
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
