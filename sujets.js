@@ -68,7 +68,7 @@ bot.on('callback_query', async (callbackQuery) => {
             await bot.editMessageText(`*📂 المجلد:* \`${data.path || 'الرئيسي'}\`\n\nاختر مجلدًا أو ملفًا لاستعراضه:`, { chat_id: chatId, message_id: messageId, reply_markup: options.reply_markup, parse_mode: 'Markdown' });
         } else if (data.type === 'file') {
             const fileUrl = `https://raw.githubusercontent.com/Habiboullah0/PDF/main/${data.path}`;
-            console.log('Sending file:', fileUrl);
+            console.log('Sending file...');
 
             try {
                 const fileBuffer = await axios.get(fileUrl, { responseType: 'arraybuffer' });
