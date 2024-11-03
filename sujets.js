@@ -1,6 +1,14 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 require('dotenv').config();
+const PORT = process.env.PORT || 3000; // تعيين 3000 كمنفذ افتراضي
+
+const express = require('express');
+const app = express();
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 const repoUrl = 'https://api.github.com/repos/Habiboullah0/PDF/contents/';
