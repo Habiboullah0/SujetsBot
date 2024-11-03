@@ -1,7 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
+require('dotenv').config();
 
-const bot = new TelegramBot('process.env.BOT_TOKEN', { polling: true });
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 const repoUrl = 'https://api.github.com/repos/Habiboullah0/PDF/contents/';  // استبدل username و reponame باسم المستخدم واسم المستودع
 
 // دالة لجلب الملفات والمجلدات من مسار معين في المستودع
