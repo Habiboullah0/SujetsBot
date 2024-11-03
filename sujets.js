@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 const repoUrl = 'https://api.github.com/repos/Habiboullah0/PDF/contents/';
 const adminUserId = '2124127983'; // معرف المستخدم الذي يمكنه إضافة البوت هنا
-const groupInviteLink = 'https://t.me/MrSujets'; // رابط المجموعة هنا
+const groupInviteLink = 'https://t.me/+MV1DZ87moqdiYWE0'; // رابط المجموعة هنا
 const allowedGroupId = '-1002335584015'; // معرف المجموعة المسموح بها هنا
 
 // خريطة لتخزين المسارات بناءً على hash
