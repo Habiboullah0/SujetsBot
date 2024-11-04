@@ -99,7 +99,7 @@ bot.on('callback_query', async (callbackQuery) => {
 
     // تجاهل الاستجابات من المحادثات الخاصة
     if (callbackQuery.message.chat.type === 'private') {
-        return bot.sendMessage(chatId, 'يرجى الانضمام إلى المجموعة للحصول على الملفات.\nرابط المجموعة: ' + groupInviteLink);
+        return bot.sendMessage(chatId, 'يرجى الانضمام إلى المجموعة للحصول على الملفات.', {'reply_markup': {'inline_keyboard': [[{'text': 'انضم للمجموعة', 'url': groupInviteLink}]]}});
     }
 
     // تحقق مما إذا كانت الرسالة في المجموعة المسموح بها فقط
