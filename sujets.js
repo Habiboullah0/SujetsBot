@@ -4,8 +4,17 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 const express = require('express');
+const path = require('path');
 const crypto = require('crypto');
 const app = express();
+
+// خدمة الملفات الثابتة من المجلد الحالي
+app.use(express.static(path.join(__dirname)));
+
+// توجيه طلب الصفحة الرئيسية إلى index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
